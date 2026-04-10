@@ -17,4 +17,4 @@ Phase:3
     SNS_TOPIC_ARN
 
 Phase: 4
-- Create schedule, Event Bridge 
+- Create schedule, Event Bridge (schedule rule)
