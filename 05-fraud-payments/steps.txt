@@ -1,8 +1,8 @@
 Phase:1
 
-- Create DynamoDb Table
+- Create DynamoDb Table -> The transcations details sent for review will be stored in dynamoDB table.
 
-- Create Kinesis Stream
+- Create Kinesis Stream -> Kinesis data stream -> Give any random name -> select On demand -> size 1024
 
 - IAM role for lambda 
     - Basiclambda role
@@ -12,10 +12,12 @@ Phase:1
 - Create Lambda function assign role
 
 - Add environmental variables
-    - FRAUD_TABLE = fault-trans
+    - FRAUD_TABLE = fault-trans(The same should be same as the DynamoDB table name, other wise it will not write it to Dynamo DB)
 
 - Paste the lambda function and deploy 
 
-- Allow lambda triggers to kinesis
+- Allow lambda triggers to kinesis -> In AWS Lambda -> Configuration -> Triggers -> select Kinensis -> Slect Kinensis resource name -> Then just add it.
 
-- Pass events
+- Pass events -> Open Cloudshell -> Pass the Transcation.sh events -> There will be 2 scripts one is JSON and other is a script.
+
+In realtime we will application URL's to Kinesis so that it monitoring it and lively.
